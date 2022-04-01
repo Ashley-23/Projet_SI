@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Produit</title>
+    <link rel="stylesheet" th:href="@{/css/boostrap.min.css}">
+</head>
+<body>
+
+
+        <div class="container">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Libelle</th>
+                    <th scope="col">Quantitée</th>
+                    <th scope="col">Stock</th>
+                    <th scope="col">Date de Création</th>
+                    <th scope="col">Prix</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="item : ${Produit}">
+                    <th th:txt="${item.id}" scope="row">1</th>
+                    <td th:txt="${item.libelle}" > </td>
+                    <td th:txt="${item.qteStock}" > </td>
+                    <td th:txt="${item.qteSeuil}" > </td>
+                    <td th:txt="${item.dateCreation}" > </td>
+                    <td th:txt="${item.Prix}" > </td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+<script rel="text/javascript" th:src="@{/js/boostrap.bundle.min.js}"> </script>
+</body>
+</html>
